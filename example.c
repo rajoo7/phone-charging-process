@@ -30,10 +30,48 @@ void main()
 		int d1 = d%10;
 		int num = d/10;
 		int tens = num%10;
-		printf("%d",d1);
+		//printf("%d",d1);
 		printf(suffix2[tens-2]);
 		printf(" ");
-		printf("%c",num[d1]);
+		//char rt = num[d1-1];
+		//printf("%c",rt);
+		if (d1 == 1)
+		{
+			printf("one ");
+		}
+		if (d1 == 2)
+                {
+                        printf("two ");
+                }
+		if (d1 == 3)
+                {
+                        printf("Three ");
+                }
+		if (d1 == 4)
+                {
+                        printf("four ");
+                }
+		if (d1 == 5)
+                {
+                        printf("Five ");
+                }
+		if (d1 == 6)
+                {
+                        printf("six ");
+                }
+		if (d1 == 7)
+                {
+                        printf("seven ");
+                }
+		if (d1 == 8)
+                {
+                        printf("eight ");
+                }
+		if (d1 == 9)
+                {
+                        printf("nine ");
+                }
+			
 	}
 	/*else if(d>9)
 	{
@@ -50,6 +88,14 @@ void main()
 	{
 		printf("Not a valid Month");
 	}
-							
+	//calculating for year
+	int y4 = y%10;
+	int y_3 = y%100;
+	int y3 = y_3/10;
+	int y_2 = y3/10;
+	int y1 = y/1000;
+	printf("%d,%d,%d",y4,y3,y_2);
+
+			
 
 }
