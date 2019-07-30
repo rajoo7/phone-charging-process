@@ -6,7 +6,8 @@ void main()
 	char* month[] = {"January", "February", "March", "April", "May", "June", "July", "August", "september", "October", "november", "December"};
 	char* suffix1[] = {"ten","eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen", "twenty"};
 	char* suffix2[] = {"twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninty"};
-	printf("Enter the date");
+	
+	printf("Enter the date ");
 	scanf("%d/%d/%d",&d,&m,&y);
 	if(d<10)
 	{
@@ -23,6 +24,7 @@ void main()
 		{
 			int unit = d%10;
 			printf(suffix1[unit]);
+			printf(" ");
 		}
 	}
 	else if(d>20 && d<32)
@@ -82,7 +84,7 @@ void main()
 	if(m<13)
 	{
 		printf(month[m-1]);
-		printf("\n");
+		printf(" ");
 	}
 	else
 	{
@@ -93,9 +95,40 @@ void main()
 	int y_3 = y%100;
 	int y3 = y_3/10;
 	int y_2 = y3/10;
+	int yn = y/100;
+	int y2 = yn%10;
 	int y1 = y/1000;
-	printf("%d,%d,%d",y4,y3,y_2);
-
-			
+	//printf("%d,%d,%d,%d",y4,y3,y2,y1);
+	printf(num[y1-1]);
+	printf(" thousand ");
+	if(y2==0)
+	{
+	    printf(" ");
+	}
+	else
+	{
+	    printf(num[y2-1]);
+	    printf(" ");
+	    
+	}
+	if(y2 == 0)
+	{
+	    printf(" ");
+	}
+	else
+	{
+	    printf(num[y2]);
+	    printf("hundred ");
+	}
+	if(y3 == 0)
+	{
+	    printf(" ");
+	}
+	else
+	{
+	    printf(suffix2[y3-2]);
+	    printf(" ");
+	}
+	printf(num[y4-1]);
 
 }
